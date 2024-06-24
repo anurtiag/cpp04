@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/23 07:50:56 by kali              #+#    #+#             */
-/*   Updated: 2024/06/24 13:51:21 by anurtiag         ###   ########.fr       */
+/*   Created: 2024/06/23 08:14:08 by kali              #+#    #+#             */
+/*   Updated: 2024/06/24 13:54:37 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#include "Dog.hpp"
+#include "Cat.hpp"
 
-# include "Animal.hpp"
-# include <string>
-# include <iostream>
-
-class Cat : public Animal
+int main(void)
 {
-    protected:
-        std::string type;
-    public:
-        Cat();
-        Cat(const Cat &source);
-        Cat operator=(const Cat &source);
-        ~Cat();
-        void makesound();
-};
+    Animal jerry;
+    Cat tom;
+    Dog spike;
 
-
-#endif
+    jerry.makesound();
+    tom.makesound();
+    spike.makesound();
+    return(0);
+}

@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/23 07:50:56 by kali              #+#    #+#             */
-/*   Updated: 2024/06/24 13:51:21 by anurtiag         ###   ########.fr       */
+/*   Created: 2024/06/24 11:30:22 by anurtiag          #+#    #+#             */
+/*   Updated: 2024/06/24 11:40:25 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-# include "Animal.hpp"
-# include <string>
-# include <iostream>
-
-class Cat : public Animal
+class Brain
 {
-    protected:
-        std::string type;
-    public:
-        Cat();
-        Cat(const Cat &source);
-        Cat operator=(const Cat &source);
-        ~Cat();
-        void makesound();
+    
 };
-
 
 #endif

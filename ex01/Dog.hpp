@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/23 07:50:56 by kali              #+#    #+#             */
-/*   Updated: 2024/06/24 13:51:21 by anurtiag         ###   ########.fr       */
+/*   Created: 2024/06/23 07:50:59 by kali              #+#    #+#             */
+/*   Updated: 2024/06/23 08:19:06 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
 # include "Animal.hpp"
 # include <string>
 # include <iostream>
 
-class Cat : public Animal
+class Dog : public Animal
 {
     protected:
         std::string type;
     public:
-        Cat();
-        Cat(const Cat &source);
-        Cat operator=(const Cat &source);
-        ~Cat();
+        Dog();
+        Dog(const Dog &source);
+        Dog operator=(const Dog &source);
+        ~Dog();
         void makesound();
 };
 
