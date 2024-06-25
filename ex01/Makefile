@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kali <kali@student.42.fr>                  +#+  +:+       +#+         #
+#    By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/23 05:44:59 by kali              #+#    #+#              #
-#    Updated: 2024/06/23 08:17:02 by kali             ###   ########.fr        #
+#    Updated: 2024/06/25 09:38:04 by anurtiag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	phonebook
 
 
-SRCS			=	main.cpp Dog.cpp Cat.cpp Animal.cpp
+SRCS			=	main.cpp Brain.cpp Dog.cpp Cat.cpp Animal.cpp
 
 
 OBJ				=	$(SRCS:.cpp=.o)

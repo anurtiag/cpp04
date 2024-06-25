@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 07:50:50 by kali              #+#    #+#             */
-/*   Updated: 2024/06/24 14:29:56 by kali             ###   ########.fr       */
+/*   Updated: 2024/06/25 08:14:19 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Cat::Cat(Cat &source) : Animal()
     brain = source.brain;
 }
 
-Cat Cat::operator=(const Cat &source)
+Cat Cat::operator=(Cat &source)
 {
     std::cout << "Operator assignment constructor called" << std::endl;
     this->type = source.type;
