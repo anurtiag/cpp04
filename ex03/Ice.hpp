@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/24 11:30:19 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/25 10:07:27 by anurtiag         ###   ########.fr       */
+/*   Created: 2024/06/25 13:45:15 by anurtiag          #+#    #+#             */
+/*   Updated: 2024/06/25 13:55:01 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
-# include <iostream>
-# include <string>
+# include "AMateria.hpp"
 
-class Brain
+class Ice : public AMateria
 {
     protected:
-        std::string ideas[100];
+    
     public:
-        Brain();
-        Brain(Brain &source);
-        Brain operator=(Brain &source);
-        ~Brain();
-        void get_idea(int n);
-        void set_idea(std::string new_idea, int n);
+       Ice();
+       Ice(Ice &source);
+       Ice operator=(Ice &source);
+       ~Ice(); 
 };
+
 
 #endif

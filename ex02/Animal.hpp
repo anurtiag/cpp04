@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/24 11:30:19 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/25 10:07:27 by anurtiag         ###   ########.fr       */
+/*   Created: 2024/06/23 05:51:23 by kali              #+#    #+#             */
+/*   Updated: 2024/06/25 12:59:00 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-# include <iostream>
 # include <string>
+# include <iostream>
 
-class Brain
+class Animal
 {
     protected:
-        std::string ideas[100];
+        std::string type;
     public:
-        Brain();
-        Brain(Brain &source);
-        Brain operator=(Brain &source);
-        ~Brain();
-        void get_idea(int n);
-        void set_idea(std::string new_idea, int n);
+        Animal();
+        Animal(const Animal &source);
+        Animal operator=(const Animal &source);
+        virtual ~Animal();
+        virtual void makesound() = 0;
+        virtual void get_idea(int n) = 0;
+        virtual void set_idea(std::string new_idea, int n) = 0;
 };
+
 
 #endif
