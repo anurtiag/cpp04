@@ -25,7 +25,7 @@ echo "#ifndef $INCLUSION
 # define $INCLUSION
 
 # include <iostream>
-# include <iostream>
+# include <string>
 
 " > $class.hpp
 

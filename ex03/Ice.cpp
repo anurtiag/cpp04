@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:45:18 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/26 09:29:41 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/26 11:20:15 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,11 @@ Ice& Ice::operator=(Ice &source)
 Ice::~Ice()
 {
     std::cout << "Ice destructor called" << std::endl;
+}
+
+
+
+void Ice::use(ICharacter& target)
+{
+    std::cout << "* shoots an ice bolt at " << target.name << std::endl;
 }

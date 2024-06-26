@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:03:28 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/26 09:16:01 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/26 11:15:22 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ AMateria& AMateria::operator=(AMateria &source)
 
 AMateria::~AMateria()
 {
-    std::cout << "AMaateria destructor called" << std::endl;
+    std::cout << "AMateria destructor called" << std::endl;
 }
