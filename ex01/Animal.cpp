@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 06:06:44 by kali              #+#    #+#             */
-/*   Updated: 2024/06/25 11:32:57 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/26 10:06:40 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Animal::Animal()
 Animal::Animal(const Animal &source)
 {
     std::cout << "Animal copy constructor called" << std::endl;
-    this->type = source.type;
+    *this = source;
 }
 
 Animal Animal::operator=(const Animal &source)

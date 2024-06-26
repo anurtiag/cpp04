@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 05:51:23 by kali              #+#    #+#             */
-/*   Updated: 2024/06/25 12:59:00 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/26 09:16:30 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Animal
     public:
         Animal();
         Animal(const Animal &source);
-        Animal operator=(const Animal &source);
+        Animal& operator=(const Animal &source);
         virtual ~Animal();
         virtual void makesound() = 0;
         virtual void get_idea(int n) = 0;

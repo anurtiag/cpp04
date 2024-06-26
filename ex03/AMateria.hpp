@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:03:25 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/25 13:51:52 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/26 09:16:06 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class AMateria
         AMateria(AMateria &source);
         ~AMateria();
         std::string const & getType() const;
-        AMateria operator=(AMateria &source);
+        AMateria& operator=(AMateria &source);
         virtual AMateria* clone() const = 0;
         // virtual void use(ICharacter& target);
 };

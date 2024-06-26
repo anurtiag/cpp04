@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:03:28 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/25 13:58:35 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/26 09:16:01 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ AMateria::AMateria(AMateria &source)
     *this = source;
 }
 
-AMateria AMateria::operator=(AMateria &source)
+AMateria& AMateria::operator=(AMateria &source)
 {
     std::cout << "default AMateria constructor called" << std::endl;
     *this = source;

@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 06:06:44 by kali              #+#    #+#             */
-/*   Updated: 2024/06/25 12:55:58 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/26 09:16:25 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ Animal::Animal(const Animal &source)
     this->type = source.type;
 }
 
-// Animal Animal::operator=(const Animal &source)
-// {
-//     std::cout << "Operator assignment constructor called" << std::endl;
-//     this->type = source.type;
-//     return(*this);
-// }
+Animal& Animal::operator=(const Animal &source)
+{
+    std::cout << "Operator assignment constructor called" << std::endl;
+    this->type = source.type;
+    return(*this);
+}
 
 Animal::~Animal()
 {
