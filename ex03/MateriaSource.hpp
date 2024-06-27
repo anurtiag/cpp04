@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:21:25 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/26 16:29:19 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/27 09:13:55 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 class MateriaSource : public IMateriaSource
 {
     protected:
-        
+        AMateria* matery[4]; 
     public:
         MateriaSource();
         MateriaSource(MateriaSource &source);

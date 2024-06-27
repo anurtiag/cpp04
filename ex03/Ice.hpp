@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:45:15 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/26 11:19:05 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/27 12:12:23 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@ class Ice : public AMateria
         std::string type;
     public:
         Ice();
-        Ice(Ice &source);
-        Ice& operator=(Ice &source);
+        Ice(Ice const &source);
+        Ice& operator=(Ice const &source);
         ~Ice();
-        // void use(ICharacter& target);
+        void use(ICharacter& target);
+        AMateria* clone() const;
 };
 
 

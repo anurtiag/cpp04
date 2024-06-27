@@ -12,10 +12,11 @@ class Cure : public AMateria
         std::string type;
     public:
         Cure();
-        Cure(Cure &source);
-        Cure& operator=(Cure &source);
+        Cure(Cure const &source);
+        Cure& operator=(Cure const &source);
         ~Cure();
         void use(ICharacter& target);
+        AMateria* clone() const;
 };
 
 #endif

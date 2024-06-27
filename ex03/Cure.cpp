@@ -6,28 +6,28 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:32:54 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/26 15:32:58 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/27 12:13:00 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
 
-Cure::Cure()
+Cure::Cure() : AMateria()
 {
-    this->type = type;
+    this->type = "cure";
     std::cout << "Cure default constructor called" << std::endl;
 }
 
 
-Cure::Cure(Cure &source)
+Cure::Cure(Cure const &source)
 {
     std::cout << "Cure copy constructor called" << std::endl;
     *this = source;
 }
 
 
-Cure& Cure::operator=(Cure &source)
+Cure& Cure::operator=(Cure const &source)
 {
     std::cout << "Cure copy assignment called" << std::endl;
     *this = source;
@@ -43,5 +43,12 @@ Cure::~Cure()
 
 void Cure::use(ICharacter& target)
 {
-    std::cout << "* heals " << target.name << "'s wounds *" << std::endl;
+    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+}
+
+AMateria* Cure::clone() const
+{
+   AMateria* c;
+   c = new Cure(*this);
+   return(c);
 }

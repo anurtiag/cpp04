@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 08:14:08 by kali              #+#    #+#             */
-/*   Updated: 2024/06/25 12:59:48 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/27 11:30:40 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main(void)
 {
-    Animal jerry;
+    // Animal jerry;
     Cat tom;
     Dog spike;
     Animal *animal[100];
@@ -25,7 +25,7 @@ int main(void)
         animal[i] = new Dog();
         animal[i + 50] = new Cat();
     }
-    jerry.makesound();
+    // jerry.makesound();
     tom.makesound();
     spike.makesound();
     tom.set_idea("ive got an idea!", 0);

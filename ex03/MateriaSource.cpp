@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:21:17 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/26 16:30:39 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/27 12:03:51 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 MateriaSource::MateriaSource()
 {
     std::cout << "MateriaSource default constructor called" << std::endl;
+    for(int i = 0; i < 4; i++)
+        matery[i] = NULL;
 }
 
 
@@ -39,10 +41,27 @@ MateriaSource::~MateriaSource()
     std::cout << "MateriaSource destructor called" << std::endl;
 }
 
+
+void MateriaSource::learnMateria(AMateria* source)
+{
+    for(int i = 0; i < 4; i++)
+    {
+        if (!matery[i])
+            matery[i] = source;
+    }
+}
+
+
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
-    if (type == "Ice")
+    int i = 0;
+
+    while(matery[++i])
     {
-        new Ice* m();
+        if (type == matery[i]->getType())
+            return(matery[i]->clone());
+        else if (type == matery[i]->getType())
+            return(matery[i]->clone());
     }
+    return(0);
 }
