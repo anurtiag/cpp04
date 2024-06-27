@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:03:28 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/27 12:18:50 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/27 15:13:19 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,9 @@ AMateria::~AMateria()
 void AMateria::use(ICharacter& target)
 {
     (void)target;
+}
+
+std::string const & AMateria::getType() const
+{
+    return(this->type);
 }

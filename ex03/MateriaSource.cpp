@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:21:17 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/27 12:03:51 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/27 15:29:00 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,18 +49,16 @@ void MateriaSource::learnMateria(AMateria* source)
         if (!matery[i])
             matery[i] = source;
     }
+    std::cout << "matery[i] tiene " << source->getType() << std::endl; 
 }
 
 
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
-    int i = 0;
-
-    while(matery[++i])
+    for (int i = 0; i < 4; i++)
     {
+        std::cout << "estamos buscando " << type << " y lo comparamos con " << matery[i]->getType() << std::endl;
         if (type == matery[i]->getType())
-            return(matery[i]->clone());
-        else if (type == matery[i]->getType())
             return(matery[i]->clone());
     }
     return(0);

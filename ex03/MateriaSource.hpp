@@ -6,19 +6,19 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:21:25 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/27 09:13:55 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/27 13:41:08 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATERIASOURCE_HPP
 # define MATERIASOURCE_HPP
 
+
 # include <iostream>
 # include <string>
 # include "IMateriaSource.hpp"
 # include "Ice.hpp"
 # include "Cure.hpp"
-
 
 class MateriaSource : public IMateriaSource
 {

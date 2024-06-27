@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:03:25 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/27 12:19:37 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/27 12:29:18 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 
 # include <iostream>
 # include <string>
-# include "Character.hpp"
 # include "ICharacter.hpp"
+# include "Character.hpp"
+
+class ICharacter;
 
 class AMateria
 {

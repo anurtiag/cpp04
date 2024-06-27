@@ -6,34 +6,35 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:45:18 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/27 12:12:52 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/27 15:29:33 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice() : AMateria()
+Ice::Ice() : AMateria("ice")
 {
-    this->type = "ice";
+    // this->type = "ice";
     std::cout << "Ice default constructor called" << std::endl;
 }
 
 Ice::Ice(Ice const &source) : AMateria(source)
 {
     std::cout << "Ice copy constructor called" << std::endl;
-    *this = source;
+    this->type = source.type;
 }
 
 Ice& Ice::operator=(Ice const &source)
 {
     std::cout << "Ice copy assignment called" << std::endl;
+    this->type = source.type;
+    return(*this);
 }
 
 Ice::~Ice()
 {
     std::cout << "Ice destructor called" << std::endl;
 }
-
 
 
 void Ice::use(ICharacter& target)

@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 12:47:36 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/26 16:25:55 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/27 15:22:49 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,24 +58,30 @@ Character::~Character()
 
 std::string const & Character::getName() const
 {
+    // std::cout << "pasamos del while  " << name << std::endl;
     return(name);
 }
 
 
 void Character::use(int idx, ICharacter& target)
 {
-    if ((idx >= 0 && idx < 4) && inventory[idx])
+    if ((idx >= 0 && idx < 4) && inventory[idx] != NULL)
+    {
         inventory[idx]->use(target);
+    }
 }
 
 
 void Character::equip(AMateria* m)
 {
     int i = 0;
-    while(inventory[i])
+    while(inventory[i] != NULL)
         i++;
     if (i >= 0 && i < 4)
         inventory[i] = m;
+    std::cout << name << " has equipped " << std::endl;
+    if (m == 0)
+        std::cout << "no has clonado la materia puto bobo" << std::endl;
 }
 
 
