@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:45:18 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/27 15:29:33 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/06/29 14:19:05 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@ Ice::Ice() : AMateria("ice")
     std::cout << "Ice default constructor called" << std::endl;
 }
 
+
 Ice::Ice(Ice const &source) : AMateria(source)
 {
     std::cout << "Ice copy constructor called" << std::endl;
     this->type = source.type;
 }
+
 
 Ice& Ice::operator=(Ice const &source)
 {

@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 07:50:59 by kali              #+#    #+#             */
-/*   Updated: 2024/06/25 10:36:50 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/13 12:23:48 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class Dog : public Animal
         void makesound();
         void get_idea(int n);
         void set_idea(std::string new_idea, int n);
+        Brain* getBrain() const;
 };
 
 

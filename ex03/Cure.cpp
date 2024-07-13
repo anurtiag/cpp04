@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:32:54 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/27 15:21:11 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/13 14:21:24 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void Cure::use(ICharacter& target)
 AMateria* Cure::clone() const
 {
    AMateria* c;
-   c = new Cure(*this);
+   c = new Cure();
    std::cout << "pasamos por aqui y hemos clonado " << c->getType();
    return(c);
 }

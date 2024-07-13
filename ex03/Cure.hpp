@@ -9,7 +9,7 @@
 class Cure : public AMateria
 {
     protected:
-        std::string type;
+
     public:
         Cure();
         Cure(Cure const &source);

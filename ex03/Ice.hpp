@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:45:15 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/27 12:12:23 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/13 14:22:24 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Ice : public AMateria
 {
     protected:
-        std::string type;
+
     public:
         Ice();
         Ice(Ice const &source);

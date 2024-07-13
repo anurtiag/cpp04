@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 07:50:56 by kali              #+#    #+#             */
-/*   Updated: 2024/06/25 09:57:20 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/13 12:24:00 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class Cat : public Animal
         void makesound();
         void get_idea(int n);
         void set_idea(std::string new_idea, int n);
+        Brain* getBrain() const;
 };
 
 

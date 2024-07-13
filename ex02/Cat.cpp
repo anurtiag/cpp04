@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 07:50:50 by kali              #+#    #+#             */
-/*   Updated: 2024/06/25 11:29:37 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/13 12:23:27 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ Cat::Cat(Cat &source) : Animal()
 {
     std::cout << "Cat copy constructor called" << std::endl;
     this->type = source.type;
-    brain = source.brain;
+    this->brain = new Brain();
+    *(this->brain) = *(source.getBrain());
 }
 
 Cat Cat::operator=(Cat &source)
@@ -53,4 +54,9 @@ void Cat::set_idea(std::string new_idea, int n)
 void Cat::get_idea(int n)
 {
     brain->get_idea(n);
+}
+
+Brain* Cat::getBrain() const
+{
+    return(this->brain);
 }

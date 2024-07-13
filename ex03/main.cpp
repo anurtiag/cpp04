@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:03:22 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/27 15:16:31 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/13 13:29:13 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int main()
     ICharacter* me = new Character("me");
     AMateria* tmp;
     tmp = src->createMateria("ice");
+    (void)me; (void)tmp;
     me->equip(tmp);
     tmp = src->createMateria("cure");
     me->equip(tmp);

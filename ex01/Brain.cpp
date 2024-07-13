@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 11:30:22 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/25 11:39:13 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/13 12:16:50 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 Brain::Brain()
 {
     std::cout << "Brain default constructor called" << std::endl;
+    for(int i = 0; i < 100; i++)
+        ideas[i] = "";
 }
 
 Brain::Brain(Brain &source)
@@ -37,7 +39,7 @@ Brain::~Brain()
     std::cout << "Brain destructor called" << std::endl;
 }
 
-void Brain::set_idea(std::string new_idea, int n)
+void Brain::setIdea(std::string new_idea, int n)
 {
     if (n < 0 || n > 99)
     {
@@ -47,7 +49,7 @@ void Brain::set_idea(std::string new_idea, int n)
     ideas[n] = new_idea;
 }
 
-void Brain::get_idea(int n)
+void Brain::getIdea(int n) const
 {
     if((n < 0 || n > 99) || (ideas[n].empty()))
         std::cout << "my brain is empty :(" << std::endl;

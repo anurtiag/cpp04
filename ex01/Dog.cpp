@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 08:12:36 by kali              #+#    #+#             */
-/*   Updated: 2024/06/25 11:29:33 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/13 12:14:40 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ Dog::Dog(const Dog &source) : Animal()
 {
     std::cout << "Dog copy constructor called" << std::endl;
     this->type = source.type;
+    this->brain = new Brain();
+    *(this->brain) = *(source.getBrain());
 }
 
 Dog Dog::operator=(const Dog &source)
@@ -35,6 +37,7 @@ Dog Dog::operator=(const Dog &source)
 Dog::~Dog()
 {
     std::cout << "Dog destructor called" << std::endl;
+    delete (this->brain);
 }
 
 void Dog::makesound()
@@ -42,12 +45,17 @@ void Dog::makesound()
     std::cout << "woof I suppose" << std::endl;
 }
 
-void Dog::set_idea(std::string new_idea, int n)
+void Dog::setIdea(std::string new_idea, int n)
 {
-    brain->set_idea(new_idea, n);
+    brain->setIdea(new_idea, n);
 }
 
-void Dog::get_idea(int n)
+void Dog::getIdea(int n) const
 {
-    brain->get_idea(n);
+    brain->getIdea(n);
+}
+
+Brain* Dog::getBrain() const
+{
+    return(this->brain);
 }

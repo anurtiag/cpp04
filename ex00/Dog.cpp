@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 08:12:36 by kali              #+#    #+#             */
-/*   Updated: 2024/06/23 08:21:34 by kali             ###   ########.fr       */
+/*   Updated: 2024/07/13 11:06:03 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Dog::~Dog()
     std::cout << "Dog destructor called" << std::endl;
 }
 
-void Dog::makesound()
+void Dog::makeSound() const
 {
     std::cout << "woof I suppose" << std::endl;
 }

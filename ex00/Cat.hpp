@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 07:50:56 by kali              #+#    #+#             */
-/*   Updated: 2024/06/24 13:51:21 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/13 11:36:03 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@
 class Cat : public Animal
 {
     protected:
-        std::string type;
+
     public:
         Cat();
         Cat(const Cat &source);
         Cat operator=(const Cat &source);
         ~Cat();
-        void makesound();
+        void makeSound() const;
 };
 
 

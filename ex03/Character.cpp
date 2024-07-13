@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 12:47:36 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/06/27 15:22:49 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/13 13:27:33 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ Character::Character()
     this->name = "default";
     for (int i = 0; i < 4; i++)
         inventory[i] = NULL;
+    floorIndex = 0;
+    Floor = NULL;
     std::cout << "Character default constructor called" << std::endl;
 }
 
@@ -53,12 +55,13 @@ Character::~Character()
         if(inventory[i])
             delete inventory[i];
     }
+    delete[] Floor;
+    Floor = NULL;
 }
 
 
 std::string const & Character::getName() const
 {
-    // std::cout << "pasamos del while  " << name << std::endl;
     return(name);
 }
 
@@ -91,5 +94,11 @@ void Character::unequip(int idx)
     {
         floor.push_back(this->inventory[idx]);
         inventory[idx] = NULL;
+        floorIndex++;
+        AMateria** newFloor = new AMateria*[floorIndex];
+        for(int i = 0; i < (floorIndex - 1); i++)
+            newFloor[i] = Floor[i];
+        delete Floor;
+        Floor = newFloor;
     }
 }

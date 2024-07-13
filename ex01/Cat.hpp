@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 07:50:56 by kali              #+#    #+#             */
-/*   Updated: 2024/06/25 09:57:20 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/13 11:58:26 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,14 @@ class Cat : public Animal
         Brain *brain;
     public:
         Cat();
-        Cat(Cat &source);
-        Cat operator=(Cat &source);
+        Cat(Cat& source);
+        Cat operator=(Cat& source);
         ~Cat();
         void makesound();
-        void get_idea(int n);
-        void set_idea(std::string new_idea, int n);
+        void getIdea(int n) const;
+        void setIdea(std::string new_idea, int n);
+        void printIdea() const;
+        Brain* getBrain() const;
 };
 
 
