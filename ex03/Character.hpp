@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 12:47:51 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/07/13 14:41:22 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/15 11:01:53 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class Character : public ICharacter
     protected:
         std::string name;
         AMateria* inventory[4];
-        std::vector<AMateria*> floor;
         int floorIndex;
         AMateria** Floor;
     public:

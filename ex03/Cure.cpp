@@ -6,16 +6,15 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:32:54 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/07/13 14:21:24 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/15 09:25:05 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
 
-Cure::Cure() : AMateria()
+Cure::Cure() : AMateria("cure")
 {
-    this->type = "cure";
     std::cout << "Cure default constructor called" << std::endl;
 }
 
@@ -50,6 +49,6 @@ AMateria* Cure::clone() const
 {
    AMateria* c;
    c = new Cure();
-   std::cout << "pasamos por aqui y hemos clonado " << c->getType();
+//    std::cout << "pasamos por aqui y hemos clonado " << c->getType();
    return(c);
 }

@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:21:17 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/07/13 14:26:08 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/15 16:23:52 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,12 @@ MateriaSource::MateriaSource()
 MateriaSource::MateriaSource(MateriaSource &source)
 {
     std::cout << "MateriaSource copy constructor called" << std::endl;
-    *this = source;
+    // *this = source;
+    for(int i = 0; i < 4; i++)
+    {
+        if (source.matery[i] != NULL)
+            this->matery[i] = source.matery[i]->clone();
+    }
 }
 
 
@@ -52,8 +57,12 @@ void MateriaSource::learnMateria(AMateria* source)
     for(int i = 0; i < 4; i++)
     {
         if (matery[i] == NULL)
+        {
             matery[i] = source;
+            return ;
+        }
     }
+    std::cout << "No space left to learn new matery" << std::endl;
 }
 
 

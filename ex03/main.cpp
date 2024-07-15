@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 13:03:22 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/07/13 13:29:13 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/15 09:28:54 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,13 @@
 int main()
 {
     MateriaSource* src = new MateriaSource();
-    src->learnMateria(new Ice());
     src->learnMateria(new Cure());
+    src->learnMateria(new Ice());
     ICharacter* me = new Character("me");
     AMateria* tmp;
-    tmp = src->createMateria("ice");
-    (void)me; (void)tmp;
-    me->equip(tmp);
     tmp = src->createMateria("cure");
+    me->equip(tmp);
+    tmp = src->createMateria("ice");
     me->equip(tmp);
     ICharacter* bob = new Character("bob");
     std::cout << std::endl << std::endl << std::endl;

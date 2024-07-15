@@ -6,7 +6,7 @@
 /*   By: anurtiag <anurtiag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 12:47:36 by anurtiag          #+#    #+#             */
-/*   Updated: 2024/07/13 13:27:33 by anurtiag         ###   ########.fr       */
+/*   Updated: 2024/07/15 16:21:21 by anurtiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ Character::Character()
 Character::Character(std::string name)
 {
     this->name = name;
+    for (int i = 0; i < 4; i++)
+        inventory[i] = NULL;
+    floorIndex = 0;
+    Floor = NULL;
     std::cout << "Character param constructor called" << std::endl;
 }
 
@@ -33,7 +37,11 @@ Character::Character(std::string name)
 Character::Character(Character &source)
 {
     std::cout << "Character copy constructor called" << std::endl;
-    *this = source;
+    for(int i = 0; i < 4; i++)
+    {
+        if(source.inventory[i] != NULL)
+            this->inventory[i] = source.inventory[i]->clone();
+    }
 }
 
 
@@ -48,8 +56,6 @@ Character& Character::operator=(Character &source)
 Character::~Character()
 {
     std::cout << "Character destructor called" << std::endl;
-    for (std::vector<AMateria*>::iterator it = floor.begin(); it != floor.end(); ++it)
-        delete *it;
     for(int i = 0; i < 4; i++)
     {
         if(inventory[i])
@@ -80,11 +86,13 @@ void Character::equip(AMateria* m)
     int i = 0;
     while(inventory[i] != NULL)
         i++;
-    if (i >= 0 && i < 4)
+    if (i >= 0 && i < 4 && m != NULL)
+    {
         inventory[i] = m;
-    std::cout << name << " has equipped " << std::endl;
-    if (m == 0)
-        std::cout << "no has clonado la materia puto bobo" << std::endl;
+        std::cout << name << " has equipped " << m->getType() << std::endl;
+    }
+    else
+        std::cout << "coudnt equip matery " << m->getType() << std::endl;
 }
 
 
@@ -92,12 +100,12 @@ void Character::unequip(int idx)
 {
     if(inventory[idx])
     {
-        floor.push_back(this->inventory[idx]);
-        inventory[idx] = NULL;
         floorIndex++;
         AMateria** newFloor = new AMateria*[floorIndex];
-        for(int i = 0; i < (floorIndex - 1); i++)
+        for(int i = 0; i < (floorIndex); i++)
             newFloor[i] = Floor[i];
+        newFloor[floorIndex] = inventory[idx];
+        inventory[idx] = NULL;
         delete Floor;
         Floor = newFloor;
     }
